@@ -1,0 +1,8 @@
+<div class="user-profile">
+  <img [src]="user.photo" alt="User Photo">
+  <h2>{{ user.firstName }} {{ user.name }}</h2>
+  <p *ngIf="showAge">Age: {{ user.age }}</p>
+  <input [(ngModel)]="user.quote" placeholder="Votre citation ici">
+  <p> Citation : {{ user.quote }}</p>
+  <button (click)="toggleAge()">Afficher/Masquer mon âge</button>
+</div>
